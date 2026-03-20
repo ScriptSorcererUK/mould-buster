@@ -2,6 +2,8 @@
 MouldBuster - Raspberry Pi-based mould detector
 
 
+You can read all about our project and the reasons for it here [Introduction.docx](Introduction.docx)
+
 You can see our video of the MouldBuster in action here. https://www.youtube.com/watch?v=cOiYnyOdLyo
 
 You can read how to build this device here along with links to the hardware and software used to create it. [Build%20guide%20Mangopi.docx](Build%20guide%20Mangopi.docx)
