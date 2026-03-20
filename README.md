@@ -13,3 +13,5 @@ You can download the 3D printable container to go on the clear food container he
 You can download the Python program here [Mouldbuster.py](Mouldbuster.py)
 
 You can download the MicroPython program for the Wemos D1 Mini here [WemosGasSensor.py](WemosGasSensor.py)
+
+The Hardware we bought and the costs [Shopping%20List.xlsx](Shopping%20List.xlsx)
