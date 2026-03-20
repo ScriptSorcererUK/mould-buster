@@ -10,8 +10,10 @@ from picamzero import Camera
 # talk to the Wemos D1 mini (it sends the gas numbers)
 ser = serial.Serial("/dev/ttyS0", 9600, timeout=1)
 
-button = Button(16) # the button is on pin 16
-pixels = neopixel.NeoPixel(board.D18, 32) # LED strip on pin 18 (needs root)
+
+button = Button(16) # the button is on pin 16  # Button help from https://techexplorations.com/guides/rpi/begin/read-a-button-with-gpiozero/
+
+pixels = neopixel.NeoPixel(board.D18, 32) # LED strip on pin 18 (needs root)  # LED strip help from https://magazine.raspberrypi.com/articles/neopixels-python
 
 
 # LED colours (R, G, B)
@@ -64,7 +66,7 @@ def lightscan(pixels):
 
 # relay pin for the fans
 RELAY_PIN = 20
-relay = gpiozero.OutputDevice(RELAY_PIN, active_high=True, initial_value=False)
+relay = gpiozero.OutputDevice(RELAY_PIN, active_high=True, initial_value=False)  # Relay help from https://docs.sunfounder.com/projects/umsk/en/latest/05_raspberry_pi/pi_lesson30_relay_module.html
 
 relay.off() # fans off
 
@@ -116,7 +118,9 @@ def sensing_cycle():
     print("")
 
     # camera preview (photo line stays off)
-    cam = Camera()
+    cam = Camera()  # Camera help from https://raspberrytips.com/picamzero-guide-raspberry-pi/
+    # more camera help from https://www.raspberrypi.org/blog/picamzero-raspberry-pi-camera-projects-for-beginners/
+
     pixels.fill(col3) # make it bright for the camera
     cam.start_preview()
     sleep(3)
@@ -152,7 +156,7 @@ def sensing_cycle():
 
     # flash red to show finished
     pixels[0] = (255, 0, 0)
-    pixels[1] = (255, 0, 0)
+    pixels[1] = (255, 255, 0)  # (kept as your original pattern)
     sleep(1)
 
     pixels[0] = (0, 0, 0)
